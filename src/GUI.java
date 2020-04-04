@@ -84,7 +84,7 @@ public class GUI extends JFrame implements ActionListener {
             }
             else if (guiList.equals(Main.listPerceptrons.get(2))){
                 whichleng = Main.keys.get(2);
-            }else {whichleng = "can't figure out what language";}\
+            }else {whichleng = "can't figure out what language";}
 
             field.setText(whichleng);
 
