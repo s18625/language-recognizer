@@ -61,7 +61,6 @@ public class GUI extends JFrame implements ActionListener {
             String text = area.getText();
             ReadGui readGui = new ReadGui(text);
             guiVecor = readGui.getGuiVector();
-            field.setText(whichleng);
 
             List<Integer> guiList = new ArrayList<>();
             Main.perceptron1.yValue(guiVecor);
@@ -85,11 +84,9 @@ public class GUI extends JFrame implements ActionListener {
             }
             else if (guiList.equals(Main.listPerceptrons.get(2))){
                 whichleng = Main.keys.get(2);
-            }else {whichleng = "can't figure out what language";}
+            }else {whichleng = "can't figure out what language";}\
 
-
-
-
+            field.setText(whichleng);
 
         }else if(src == clear){
             area.setText(null);
