@@ -39,9 +39,6 @@ public class Main {
             perceptron2 = new Perceptron();
             perceptron3 = new Perceptron();
 
-
-            System.out.println(perceptron1.getTetha());
-
             int numberOfFiles = mapOfLeanguages.get(keys.get(0)).size();
 
 
@@ -73,9 +70,6 @@ public class Main {
 
                 }
             }
-            System.out.println(perceptron1.getTetha());
-
-
 
 
 

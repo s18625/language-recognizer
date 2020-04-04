@@ -74,7 +74,11 @@ public class GUI extends JFrame implements ActionListener {
             guiList.add(Main.perceptron3.getY());
 
 
-            if (guiList.equals(Main.listPerceptrons.get(0))){
+            System.out.println(guiList);
+            if (area.getText().equals("")){
+                whichleng= "no text entered";
+            }
+            else if (guiList.equals(Main.listPerceptrons.get(0))){
                 whichleng = Main.keys.get(0);
             }else if (guiList.equals(Main.listPerceptrons.get(1))){
                 whichleng = Main.keys.get(1);
