@@ -32,7 +32,7 @@ public class Perceptron {
 
 
     }
-    public void  chanegeWeightVector(int[] inVector){
+    public void  chanegeWeightVector(double[] inVector){
         //(predicted-real)
         int diffrence;
         if(y==0){
@@ -46,7 +46,7 @@ public class Perceptron {
         }
         tetha= tetha+alpha*(-1)*diffrence;
     }
-    public void yValue(int[] inVector){
+    public void yValue(double[] inVector){
         double net =0;
         for (int i=0;i<weightVecot.length;i++){
             net += weightVecot[i]*inVector[i];
@@ -56,6 +56,11 @@ public class Perceptron {
         }
         else {
             y=0;
+        }
+    }
+    public void showVector(double[] vector){
+        for (int i=0; i<vector.length;i++){
+            System.out.println(i+"  "+vector[i]);
         }
     }
 }

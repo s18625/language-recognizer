@@ -1,13 +1,10 @@
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Maps {
-    public HashMap<String, List<int[]>>  map = new HashMap<>();
+    public HashMap<String, List<double[]>> map = new HashMap<>();
 
     public Maps(String path) throws IOException {
         File dircetory = new File(path);
@@ -21,7 +18,7 @@ public class Maps {
 
     }
 
-    public HashMap<String, List<int[]>> getMap() {
+    public HashMap<String, List<double[]>> getMap() {
         return map;
     }
 

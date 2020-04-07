@@ -12,7 +12,7 @@ public class GUI extends JFrame implements ActionListener {
 //    JPanel panel;
     JButton check,clear;
     JTextField field;
-    int[] guiVecor;
+    double[] guiVecor;
     String whichleng;
 
     public GUI(){
@@ -63,6 +63,7 @@ public class GUI extends JFrame implements ActionListener {
             guiVecor = readGui.getGuiVector();
 
             List<Integer> guiList = new ArrayList<>();
+
             Main.perceptron1.yValue(guiVecor);
             guiList.add(Main.perceptron1.getY());
 
@@ -90,6 +91,7 @@ public class GUI extends JFrame implements ActionListener {
 
         }else if(src == clear){
             area.setText(null);
+            field.setText(null);
         }
 
     }

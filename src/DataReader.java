@@ -5,13 +5,13 @@ import java.util.Map;
 
 public class DataReader {
     private  String name;
-    private List<int[]> listOfWektors = new ArrayList<>();
+    private List<double[]> listOfWektors = new ArrayList<>();
 
     public String getName() {
         return name;
     }
 
-    public List<int[]> getListOfWektors() {
+    public List<double[]> getListOfWektors() {
         return listOfWektors;
     }
 
@@ -26,7 +26,7 @@ public class DataReader {
         for (File fileName: files
              ) {
 
-            int wektor[] = new int[26];
+            double wektor[] = new double[26];
             BufferedReader reader = new BufferedReader(new FileReader(fileName));
             String line;
             while (( line= reader.readLine())!= null){
@@ -39,16 +39,37 @@ public class DataReader {
                     }
                 }
             }
+             //normalization(wektor);
             listOfWektors.add(wektor);
         }
 
 
     }
 
-    public void showVector(int[] vector){
+    public void showVector(double[] vector){
         for (int i=0; i<vector.length;i++){
             System.out.println(i+"  "+vector[i]);
         }
+    }
+
+    public void normalization(double[] wektor){
+        int suma=0;
+
+        for (double i:wektor
+             ) {
+            suma+=i;
+        }
+        double pow2 =0;
+        for (int i=0; i<wektor.length;i++){
+            wektor[i] = wektor[i]/suma;
+            pow2+=Math.pow(wektor[i],2);
+        }
+        double sqrt = Math.sqrt(pow2);
+        for (int i=0; i<wektor.length;i++){
+            wektor[i] = wektor[i]/sqrt;
+
+        }
+        //return wektor;
     }
 
 }
